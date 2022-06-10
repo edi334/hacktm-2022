@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Api/Server.Api.csproj": {}
+    "/home/keyusho/hektm/hacktm-2022/Server/Server.Api/Server.Api.csproj": {}
   },
   "projects": {
-    "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Api/Server.Api.csproj": {
+    "/home/keyusho/hektm/hacktm-2022/Server/Server.Api/Server.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Api/Server.Api.csproj",
+        "projectUniqueName": "/home/keyusho/hektm/hacktm-2022/Server/Server.Api/Server.Api.csproj",
         "projectName": "Server.Api",
-        "projectPath": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Api/Server.Api.csproj",
-        "packagesPath": "/Users/eduardcziszter/.nuget/packages/",
-        "outputPath": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Api/obj/",
+        "projectPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Api/Server.Api.csproj",
+        "packagesPath": "/home/keyusho/.nuget/packages/",
+        "outputPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/eduardcziszter/.nuget/NuGet/NuGet.Config"
+          "/home/keyusho/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
-                "projectPath": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/Server.Core.csproj"
+              "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
+                "projectPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj"
               }
             }
           }
@@ -93,21 +93,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
+    "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/Server.Core.csproj",
+        "projectUniqueName": "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj",
         "projectName": "Server.Core",
-        "projectPath": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/Server.Core.csproj",
-        "packagesPath": "/Users/eduardcziszter/.nuget/packages/",
-        "outputPath": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/obj/",
+        "projectPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj",
+        "packagesPath": "/home/keyusho/.nuget/packages/",
+        "outputPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/eduardcziszter/.nuget/NuGet/NuGet.Config"
+          "/home/keyusho/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -163,7 +163,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }

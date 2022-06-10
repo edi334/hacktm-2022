@@ -5,6 +5,8 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Server.Core.Database;
 using Server.Core.Entities;
+using Server.Core.Services;
+using Server.Core.Services.Interfaces;
 using Server.Utils;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -70,6 +72,7 @@ services.AddSwaggerGen();
 var connectionString = config.GetConnectionString("Default");
 services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString, 
     x => x.MigrationsAssembly("Server.Core")));
+services.AddScoped<IIdentityService,IdentityService>();
 
 var app = builder.Build();
 
