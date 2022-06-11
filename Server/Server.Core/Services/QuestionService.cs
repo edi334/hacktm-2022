@@ -55,7 +55,7 @@ public class QuestionService : IQuestionService
         return response;
     }
     
-    public async Task<ActionResponse> UpdateQuestion(Guid id, string questionText, string answer, bool isGrill)
+    public async Task<ActionResponse> UpdateQuestion(Guid id, string questionText, string answer)
     {
         var response = new ActionResponse<Question>();
         var questionToReplace = await _context.Questions.FirstOrDefaultAsync(x => x.Id == id);
@@ -68,14 +68,14 @@ public class QuestionService : IQuestionService
         
         questionToReplace.QuestionText = questionText;
         questionToReplace.Answer = answer;
-        questionToReplace.IsGrill = isGrill;
+        questionToReplace.IsGrill = false;
         
         await _context.SaveChangesAsync();
         response.Item = questionToReplace;
         return response;
     }
     
-    public async Task<ActionResponse> UpdateToGrillQuestion(Guid id, string questionText, string answer, bool isGrill, string option1, string option2, string option3)
+    public async Task<ActionResponse> UpdateToGrillQuestion(Guid id, string questionText, string answer, string option1, string option2, string option3)
     {
         var response = new ActionResponse<Question>();
         var questionToReplace = await _context.Questions.FirstOrDefaultAsync(x => x.Id == id);
@@ -88,7 +88,7 @@ public class QuestionService : IQuestionService
         
         questionToReplace.QuestionText = questionText;
         questionToReplace.Answer = answer;
-        questionToReplace.IsGrill = isGrill;
+        questionToReplace.IsGrill = true;
         questionToReplace.Option1 = option1;
         questionToReplace.Option2 = option2;
         questionToReplace.Option3 = option3;
