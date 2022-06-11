@@ -22,8 +22,8 @@ export class DefinitelyNotRegisterComponent implements OnInit {
       password: ['', [Validators.required]],
       confirmPassword: ['', [Validators.required]],
       phoneNumber: ['', [Validators.required]],
-      firstName:['da'],
-      lastName:['da']
+      firstName:['', [Validators.required]],
+      lastName:['', [Validators.required]]
     },
     {
       validators: this.mustMatch('password', 'confirmPassword')
