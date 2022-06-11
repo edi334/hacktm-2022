@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {AuthService} from "../../definitely-not-services/auth.service";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-definitely-not-login-page',
@@ -10,33 +11,33 @@ import {AuthService} from "../../definitely-not-services/auth.service";
 })
 export class DefinitelyNotLoginPageComponent implements OnInit {
   loginForm: FormGroup;
-  private  formSubmitAttempt = false;
 
   constructor(
-    private fb: FormBuilder,
-    // private authService: AuthService,
-    private router: Router,
+    private _fb: FormBuilder,
+    private _authService: AuthService,
+    private _router: Router,
+    private _snack:MatSnackBar,
   ) {
   }
 
   ngOnInit(): void {
-    this.loginForm = this.fb.group({
-      email: ['', Validators.required, Validators.email],
+    this.loginForm = this._fb.group({
+      email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
   }
 
-  isFieldInvalid(field: string) {
-    return (
-      (!this.loginForm.get(field)!.valid && this.loginForm.get(field)!.touched) ||
-      (this.loginForm.get(field)!.untouched && this.formSubmitAttempt)
-    );
+  async onSubmit() {
+    if (!this.loginForm.valid) {
+      this._snack.open('Check form','OK',{duration: 4000});
+      return
+    }
+   try{
+     await this._authService.login(this.loginForm.value);
+     this._snack.open('Succes','OK',{duration: 4000});
+   }
+    catch (e:any) {
+      this._snack.open(e.error.toString(),'OK',{duration: 4000});
+    }
   }
-  //
-  // async onSubmit() {
-  //   if (this.loginForm.valid) {
-  //     await this.authService.login(this.loginForm.value);
-  //   }
-  //   this.formSubmitAttempt = true;
-  // }
 }

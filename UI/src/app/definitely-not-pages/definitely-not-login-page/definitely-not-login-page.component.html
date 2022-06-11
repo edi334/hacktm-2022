@@ -1,23 +1,23 @@
 <div class="d-flex flex-row justify-content-between align-content-around h-100">
   <div class="form-container  w-50">
-    <form class="d-flex flex-column justify-content-center m-auto p-5 w-75 h-100">
+    <form class="d-flex flex-column justify-content-center m-auto p-5 w-75 h-100" [formGroup]="loginForm">
 
       <h1>Definitely<br>not login.</h1>
 
       <mat-form-field appearance="outline">
         <mat-label><b>Definitely not</b> email</mat-label>
-        <input matInput type="email"/>
+        <input formControlName="email" matInput type="email"/>
         <mat-hint>Don't write your email address</mat-hint>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label><b>Definitely not</b> password</mat-label>
-        <input matInput type="password"/>
+        <input formControlName="password" matInput type="password"/>
         <mat-hint>Don't write your password</mat-hint>
       </mat-form-field>
 
       <div class="button-container">
-        <app-definitely-not-a-button [text]="'Login'"></app-definitely-not-a-button>
+        <app-definitely-not-a-button [text]="'Login'" (click)="onSubmit()"></app-definitely-not-a-button>
         <app-definitely-not-a-button [text]="'Sign up'" [routerLink]="'/register'"></app-definitely-not-a-button>
       </div>
     </form>
