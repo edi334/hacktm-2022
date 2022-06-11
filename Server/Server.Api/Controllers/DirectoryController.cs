@@ -92,6 +92,11 @@ public class DirectoryController : ControllerBase
             return BadRequest(response.GetErrors());
         }
 
+        if (response.Item.Count == 0)
+        {
+            return new NotFoundResult();
+        }
+
         return Ok(response.Item);
     }
 }

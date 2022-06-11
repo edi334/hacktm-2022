@@ -1,1 +1,8 @@
-<p>definitely-not-home-page works!</p>
+<ng-container *ngIf="currentDirectories !== []">
+  <div class="d-flex flex-column">
+    <div *ngFor="let directory of currentDirectories">
+      <span (click)="getNext(directory.id)">{{directory.title}}</span>
+    </div>
+  </div>
+  <button (click)="goBack()">Go Back</button>
+</ng-container>
