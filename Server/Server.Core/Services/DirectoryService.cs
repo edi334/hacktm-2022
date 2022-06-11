@@ -26,11 +26,11 @@ public class DirectoryService : IDirectoryService
         return response;
     }
 
-    public async Task<ActionResponse<List<Directory>>> GoForth(Guid parentId, int level)
+    public async Task<ActionResponse<List<Directory>>> GoForth(string parentId, int level)
     {
         var directories = await _applicationDbContext
             .Directories
-            .Where(d => d.ParentId.Equals(parentId.ToString()) && d.Level == level)
+            .Where(d => d.ParentId.Equals(parentId) && d.Level == level)
             .ToListAsync();
 
         var response = new ActionResponse<List<Directory>>
@@ -41,11 +41,11 @@ public class DirectoryService : IDirectoryService
         return response;
     }
 
-    public async Task<ActionResponse<List<Directory>>> GoBackwards(Guid parentId, int level)
+    public async Task<ActionResponse<List<Directory>>> GoBackwards(string parentId, int level)
     {
         var directories = await _applicationDbContext
             .Directories
-            .Where(d => d.Id == parentId && d.Level == level)
+            .Where(d => d.Id.ToString().Equals(parentId) && d.Level == level)
             .ToListAsync();
 
         var response = new ActionResponse<List<Directory>>
