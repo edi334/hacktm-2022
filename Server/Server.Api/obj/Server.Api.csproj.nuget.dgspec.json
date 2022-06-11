@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Api/Server.Api.csproj": {}
+    "/home/keyusho/hektm/hacktm-2022/Server/Server.Api/Server.Api.csproj": {}
   },
   "projects": {
-    "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Api/Server.Api.csproj": {
+    "/home/keyusho/hektm/hacktm-2022/Server/Server.Api/Server.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Api/Server.Api.csproj",
+        "projectUniqueName": "/home/keyusho/hektm/hacktm-2022/Server/Server.Api/Server.Api.csproj",
         "projectName": "Server.Api",
-        "projectPath": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Api/Server.Api.csproj",
-        "packagesPath": "/Users/eduardcziszter/.nuget/packages/",
-        "outputPath": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Api/obj/",
+        "projectPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Api/Server.Api.csproj",
+        "packagesPath": "/home/keyusho/.nuget/packages/",
+        "outputPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/eduardcziszter/.nuget/NuGet/NuGet.Config"
+          "/home/keyusho/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -25,7 +25,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
+                "projectPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -38,6 +42,34 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -61,7 +93,77 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj",
+        "projectName": "Server.Core",
+        "projectPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj",
+        "packagesPath": "/home/keyusho/.nuget/packages/",
+        "outputPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/keyusho/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.19.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }
