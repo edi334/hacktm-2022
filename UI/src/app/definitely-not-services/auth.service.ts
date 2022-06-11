@@ -10,6 +10,7 @@ import {LocalStorage} from "@ngx-pwa/local-storage";
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
   private readonly _apiUrl = environment.apiUrl + 'api/';
   private static readonly tokenStorageKey: string = 'token';

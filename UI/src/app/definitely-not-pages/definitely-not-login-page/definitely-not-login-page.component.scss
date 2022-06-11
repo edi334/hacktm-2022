@@ -3,7 +3,11 @@
 }
 
 form > *:not(h1) {
-  margin-bottom: 30px;
+  align-items: center;
+}
+
+form > * {
+  margin-bottom: 20px;
 }
 
 .logo-container {
@@ -20,4 +24,10 @@ button {
   color: #000000;
   font-weight: bolder;
   font-size: medium;
+  margin: 0 auto;
+}
+
+mat-form-field {
+  border-radius: 25px;
+  width: 100%;
 }

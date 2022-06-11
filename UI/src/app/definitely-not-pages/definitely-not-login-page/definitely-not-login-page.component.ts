@@ -14,7 +14,7 @@ export class DefinitelyNotLoginPageComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private authService: AuthService,
+    // private authService: AuthService,
     private router: Router,
   ) {
   }
@@ -32,11 +32,11 @@ export class DefinitelyNotLoginPageComponent implements OnInit {
       (this.loginForm.get(field)!.untouched && this.formSubmitAttempt)
     );
   }
-
-  async onSubmit() {
-    if (this.loginForm.valid) {
-      await this.authService.login(this.loginForm.value);
-    }
-    this.formSubmitAttempt = true;
-  }
+  //
+  // async onSubmit() {
+  //   if (this.loginForm.valid) {
+  //     await this.authService.login(this.loginForm.value);
+  //   }
+  //   this.formSubmitAttempt = true;
+  // }
 }

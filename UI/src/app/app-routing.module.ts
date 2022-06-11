@@ -24,7 +24,6 @@ const routes: Routes = [
     component: DefinitelyNotHomePageComponent,
     pathMatch: 'full'
   },
-
 ];
 
 @NgModule({
