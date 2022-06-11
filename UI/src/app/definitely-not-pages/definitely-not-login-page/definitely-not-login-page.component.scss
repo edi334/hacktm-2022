@@ -1,19 +1,12 @@
-.form-container {
-  background-color: #F5F5F5;
-}
-
 form > *:not(h1) {
   align-items: center;
-}
-
-form > * {
-  margin-bottom: 20px;
 }
 
 .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 60%;
 }
 
 .button-container {

@@ -16,7 +16,7 @@ export class DefinitelyNotLoginPageComponent implements OnInit {
     private _fb: FormBuilder,
     private _authService: AuthService,
     private _router: Router,
-    private _snack:MatSnackBar,
+    private _snack: MatSnackBar,
   ) {
   }
 

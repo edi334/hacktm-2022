@@ -33,6 +33,9 @@ export class AuthService {
     return firstValueFrom(request$.pipe(tap(res => this.saveSession(res))));
   }
 
+  getSession() {
+    return this._session;
+  }
 
   public async saveSession(authSession?: DefinitelyNotSessionModel): Promise<void> {
     if (authSession) {

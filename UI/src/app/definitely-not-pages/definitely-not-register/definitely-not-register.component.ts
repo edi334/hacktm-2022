@@ -10,7 +10,6 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 })
 export class DefinitelyNotRegisterComponent implements OnInit {
 
-
   constructor(private _formBuilder: FormBuilder,
               private _authService: AuthService,
               private  _snack:MatSnackBar,

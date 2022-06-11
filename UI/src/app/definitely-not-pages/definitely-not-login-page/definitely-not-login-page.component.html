@@ -1,6 +1,6 @@
 <div class="d-flex flex-row justify-content-between align-content-around h-100">
-  <div class="form-container  w-50">
-    <form class="d-flex flex-column justify-content-center m-auto p-5 w-75 h-100" [formGroup]="loginForm">
+  <div [style.background-color]="'#F5F5F5'" [style.width]="'40%'">
+    <form class="d-flex flex-column justify-content-center m-auto p-5 w-75 h-100">
 
       <h1>Definitely<br>not login.</h1>
 
@@ -21,8 +21,6 @@
         <app-definitely-not-a-button [text]="'Sign up'" [routerLink]="'/register'"></app-definitely-not-a-button>
       </div>
     </form>
-
-
   </div>
   <div class="logo-container">
     <img src="assets/logo/definitely-not-a-logo.svg" width="90%">
