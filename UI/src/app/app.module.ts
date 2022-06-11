@@ -10,6 +10,8 @@ import {DefinitelyNotTopBarComponent} from './shared/definitely-not-top-bar/defi
 import {
   DefinitelyNotRegisterComponent
 } from './definitely-not-pages/definitely-not-register/definitely-not-register.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatSliderModule} from "@angular/material/slider";
 import {
