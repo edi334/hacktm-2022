@@ -1,11 +1,12 @@
 import {EventEmitter, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {firstValueFrom, map, Observable, tap} from "rxjs";
+import {firstValueFrom, tap} from "rxjs";
 import {Router} from "@angular/router";
 import {environment} from "../../environments/environment";
 import {DefinitelyNotLoginModel} from "../definitely-not-models/definitely-not-login-model";
 import {DefinitelyNotSessionModel} from "../definitely-not-models/definitely-not-session-model";
 import {LocalStorage} from "@ngx-pwa/local-storage";
+import {IRegister} from "../definitely-not-interfaces/register";
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,7 @@ export class AuthService {
 
 
   login(request: DefinitelyNotLoginModel): Promise<DefinitelyNotSessionModel> {
-    const url = this._apiUrl + "auth/login";
+    const url = this._apiUrl + "Auth/login";
     const request$ = this._http.post<DefinitelyNotSessionModel>(url, request);
     return firstValueFrom(request$.pipe(tap(res => this.saveSession(res))));
   }
@@ -56,5 +57,10 @@ export class AuthService {
     if (differentStatus) {
       this._authState.emit(!!this._token);
     }
+  }
+
+    async register(data: IRegister): Promise<any>{
+    const url = this._apiUrl + "Auth/register";
+    return firstValueFrom(this._http.post(url, data,{responseType: 'text'}));
   }
 }
