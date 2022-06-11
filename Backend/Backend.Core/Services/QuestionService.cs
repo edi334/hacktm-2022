@@ -21,8 +21,9 @@ public class QuestionService : IQuestionService
     {
         var response = new ActionResponse<List<Question>>();
         var questions = await _context.Questions.ToListAsync();
-
-        response.Item = questions;
+        var randomQuestions = questions.OrderBy(x => Guid.NewGuid()).Take(5).ToList();
+        
+        response.Item = randomQuestions;
         return response;
     }
 
