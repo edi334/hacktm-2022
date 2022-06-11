@@ -10,18 +10,12 @@ import {DefinitelyNotTopBarComponent} from './shared/definitely-not-top-bar/defi
 import {
   DefinitelyNotRegisterComponent
 } from './definitely-not-pages/definitely-not-register/definitely-not-register.component';
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {MatInputModule} from "@angular/material/input";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatSliderModule} from "@angular/material/slider";
 import {
   DefinitelyNotLoginPageComponent
 } from './definitely-not-pages/definitely-not-login-page/definitely-not-login-page.component';
-import {MatButtonModule} from "@angular/material/button";
 import {MatToolbarModule} from "@angular/material/toolbar";
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
@@ -31,7 +25,6 @@ import { DefinitelyNotQuizPageComponent } from './definitely-not-pages/definitel
 import { DefinitelyNotAButtonComponent } from './shared/definitely-not-a-button/definitely-not-a-button.component';
 import {HttpClientModule} from "@angular/common/http";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
-import { DefinitelyNotAButtonComponent } from './shared/definitely-not-a-button/definitely-not-a-button.component';
 import { DefinitelyNotCaptchaComponent } from './definitely-not-pages/definitely-not-captcha/definitely-not-captcha.component';
 
 @NgModule({
@@ -42,7 +35,7 @@ import { DefinitelyNotCaptchaComponent } from './definitely-not-pages/definitely
     DefinitelyNotRegisterComponent,
     DefinitelyNotLoginPageComponent,
     DefinitelyNotAButtonComponent,
-    DefinitelyNotCaptchaComponent
+    DefinitelyNotCaptchaComponent,
     DefinitelyNotQuizPageComponent
   ],
   imports: [
@@ -59,8 +52,6 @@ import { DefinitelyNotCaptchaComponent } from './definitely-not-pages/definitely
     HttpClientModule,
     MatSnackBarModule
   ],
-    FontAwesomeModule
-    MatRadioModule,
   providers: [],
   bootstrap: [AppComponent]
 })
