@@ -35,14 +35,24 @@ public class IdentityService : IIdentityService
             };
         }
 
-        var roles = await _userManager.GetRolesAsync(user);
+        var passwordGood = await _userManager.CheckPasswordAsync(user, request.Password);
+        if (!passwordGood)
+        {
+            return new ActionResponse<string>
+            {
+                Action = "Login",
+                Errors = new List<string> {"Invalid credentials"}
+            };
+
+        }
+
+    var roles = await _userManager.GetRolesAsync(user);
 
         var session = new Session
         {
             UserId = user.Id,
-            Token = GenerateToken(user, roles.FirstOrDefault()),
+            Token = GenerateToken(user),
             Username = user.UserName,
-            Role = roles.FirstOrDefault(),
         };
         return new ActionResponse<Session>
         {
@@ -51,7 +61,7 @@ public class IdentityService : IIdentityService
         };
     }
 
-    public async Task<ActionResponse<string>> Register(RegisterRequest request, string role)
+    public async Task<ActionResponse<string>> Register(RegisterRequest request)
     {
         if (!request.Password.Equals(request.ConfirmPassword))
         {
@@ -74,54 +84,50 @@ public class IdentityService : IIdentityService
                     Errors = new List<string> {$"The user with the email : {u.Email} already has that password"}
                 };
             }
-
-            var user = new ApplicationUser
-            {
-                UserName = request.Email,
-                Email = request.Email,
-                FirstName = request.FirstName,
-                LastName = request.LastName,
-                EmailConfirmed = true,
-            };
-            var createResult = await _userManager.CreateAsync(user, request.Password);
-            if (!createResult.Succeeded)
-            {
-                var response = new ActionResponse<string>
-                {
-                    Action = "Register"
-                };
-
-                foreach (var error in createResult.Errors) response.AddError(error.Description);
-                return response;
-            }
-
-            var addToRole = await _userManager.AddToRoleAsync(user, role);
-
-            if (addToRole.Succeeded)
-                return new ActionResponse<string>
-                {
-                    Action = "Register",
-                    Item = "User created successfully"
-                };
-            {
-                var response = new ActionResponse<string>
-                {
-                    Action = "Register"
-                };
-
-                foreach (var error in addToRole.Errors) response.AddError(error.Description);
-                return response;
-            }
         }
 
-        return new ActionResponse<string>
+        var user = new ApplicationUser
         {
-            Action = "Register",
-            Item = "User created successfully"
+            UserName = request.Email,
+            Email = request.Email,
+            FirstName = request.FirstName,
+            LastName = request.LastName,
+            EmailConfirmed = true,
         };
+        var createResult = await _userManager.CreateAsync(user, request.Password);
+        if (!createResult.Succeeded)
+        {
+            var response = new ActionResponse<string>
+            {
+                Action = "Register"
+            };
+
+            foreach (var error in createResult.Errors) response.AddError(error.Description);
+            return response;
+        }
+
+        var addToRole = await _userManager.AddToRoleAsync(user, "User");
+
+
+        if (addToRole.Succeeded)
+            return new ActionResponse<string>
+            {
+                Action = "Register",
+                Item = "User created successfully"
+            };
+        {
+            var response = new ActionResponse<string>
+            {
+                Action = "Register"
+            };
+
+            foreach (var error in addToRole.Errors) response.AddError(error.Description);
+            return response;
+        }
+
     }
 
-    private string GenerateToken(ApplicationUser newUser, string role)
+    private string GenerateToken(ApplicationUser newUser)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
         var key = Encoding.ASCII.GetBytes(_configuration.GetSection("JWT:Secret").Value);
@@ -134,7 +140,7 @@ public class IdentityService : IIdentityService
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Iss, _configuration.GetSection("JWT:Issuer").Value),
                 new Claim("id", newUser.Id),
-                new Claim(ClaimTypes.Role, role)
+                new Claim(ClaimTypes.Role, "User")
             }),
             Issuer = _configuration.GetSection("JWT:Issuer").Value,
             Expires = DateTime.UtcNow.AddDays(1),

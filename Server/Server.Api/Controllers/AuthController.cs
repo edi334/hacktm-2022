@@ -26,7 +26,7 @@ public class AuthController : Controller
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] RegisterRequest request)
     {
-        var response = await _identityService.Register(request, "Participant");
+        var response = await _identityService.Register(request);
         if (response.HasErrors())
         {
             return BadRequest(response.Errors);
