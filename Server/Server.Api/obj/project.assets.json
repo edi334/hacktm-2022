@@ -1763,8 +1763,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+<<<<<<< HEAD
             "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
               "projectPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj"
+=======
+            "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
+              "projectPath": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/Server.Core.csproj"
+>>>>>>> DefenetliNotAFrontendBranch
             }
           }
         }

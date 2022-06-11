@@ -1,0 +1,33 @@
+<div class="quiz-header-container d-inline-flex justify-content-between w-100 px-md-5">
+  <p class="quiz-header">Definitely not a quiz</p>
+</div>
+
+<div class="content-wrapper d-inline-flex px-md-5 justify-content-between w-100">
+  <div class="form-container  py-3">
+  <form [formGroup]="quizForm">
+      <label id="group-lable">{{q}}</label>
+      <div class="px-md-4">
+        <mat-radio-group formControlName="option"
+                         aria-labelledby="group-lable"
+                         class="radio-group"
+                         [(ngModel)]="option">
+          <mat-radio-button class="radio-button" *ngFor="let option of o" [value]="option">
+            {{option}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+  </form>
+  </div>
+  <div class="question-counter align-items-center justify-content-center">
+    <div class="question-counter-content flex-column d-flex justify-content-around text-center h-50" style="margin-top: 50%">
+      <p style="padding-right: 70px">{{i+1}}</p>
+      <div class="divider"><span></span></div>
+    <p style="padding-left: 70px">10</p>
+    </div>
+  </div>
+</div>
+
+<div class="arrow-container d-inline-flex justify-content-between w-100 px-md-5">
+  <button class="icon-wrapper" (click)="i=i-1"><img class="arrow-icon" src="assets/image/arrow_right.svg" alt="<-"/></button>
+  <button class="icon-wrapper" (click)="i=i+1"><img class="arrow-icon" src="assets/image/arrow_left.svg" alt="->"/></button>
+</div>

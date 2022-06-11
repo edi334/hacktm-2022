@@ -1,0 +1,136 @@
+.quiz-header {
+  font-size: 65px;
+  font-weight: 600;
+}
+
+.content-wrapper {
+  background: white;
+  padding-bottom: 75px;
+}
+
+.form-container {
+  background-color: black;
+  border-radius: 0 70px 0 70px;
+  padding-left: 30px;
+  padding-right: 150px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+  color: white;
+  padding-top: 15px;
+}
+
+.radio-button {
+  margin: 5px;
+}
+
+#group-lable {
+  font-weight: 600;
+  font-size: 40px;
+  color: white;
+}
+
+.radio-group {
+  font-weight: 450;
+  font-size: 27px;
+}
+
+.question-counter {
+  height: 350px;
+  width: 160px;
+  background-color: black;
+  border-radius: 85px 0 85px 0;
+  float: right;
+  color: white;
+}
+
+.question-counter p{
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.divider:before, divider:after{
+  content: "";
+  position: absolute;
+  background: white;
+  transform: translate(-50%, -150%) rotate(-45deg);
+  border-radius: 100px;
+  width: 150px;
+  height: 6px;
+}
+
+.arrow-icon {
+  height: 100px !important;
+  width: 100px !important;
+}
+
+
+.icon-wrapper {
+  border: none;
+  border-radius: 50%;
+}
+
+
+@media screen and (max-width: 950px) {
+  .content-wrapper {
+    flex-direction: column-reverse;
+    justify-content: space-around !important;
+  }
+
+  .form-container {
+    padding-right: 20px;
+  }
+
+  .question-counter {
+    margin-top: 15px;
+    height: 160px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .question-counter-content {
+    margin-top: 7% !important;
+    justify-content: normal;
+  }
+
+  .divider:before, divider:after {
+    width: 130px;
+    height: 5px;
+  }
+
+  .question-counter p{
+    font-size: 55px;
+    font-weight: 550;
+  }
+}
+
+@media screen and (max-width: 749px){
+  .content-wrapper {
+    padding: 20px;
+  }
+
+  .quiz-header-container {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 561px){
+  .question-counter-content {
+    margin-top: 10% !important;
+    justify-content: normal;
+  }
+
+  .divider:before, divider:after {
+    width: 100px;
+    height: 5px;
+  }
+
+  .question-counter p{
+    font-size: 40px;
+    font-weight: 500;
+  }
+}
