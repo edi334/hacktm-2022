@@ -46,8 +46,6 @@ public class IdentityService : IIdentityService
 
         }
 
-    var roles = await _userManager.GetRolesAsync(user);
-
         var session = new Session
         {
             UserId = user.Id,
@@ -93,6 +91,7 @@ public class IdentityService : IIdentityService
             FirstName = request.FirstName,
             LastName = request.LastName,
             EmailConfirmed = true,
+            PhoneNumber = request.PhoneNumber
         };
         var createResult = await _userManager.CreateAsync(user, request.Password);
         if (!createResult.Succeeded)
