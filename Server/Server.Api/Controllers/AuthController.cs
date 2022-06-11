@@ -3,7 +3,8 @@ using Server.Core.Services.Interfaces;
 using Server.Core.Utils;
 
 namespace Server.Controllers;
-
+[Route("api/[controller]")]
+[ApiController]
 public class AuthController : Controller
 {
     private readonly IIdentityService _identityService;

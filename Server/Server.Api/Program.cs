@@ -73,6 +73,7 @@ var connectionString = config.GetConnectionString("Default");
 services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString, 
     x => x.MigrationsAssembly("Server.Core")));
 services.AddScoped<IIdentityService,IdentityService>();
+services.AddScoped<IQuestionService, QuestionService>();
 
 var app = builder.Build();
 
