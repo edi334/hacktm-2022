@@ -13,7 +13,8 @@ export class DefinitelyNotRegisterComponent implements OnInit {
 
   constructor(private _formBuilder: FormBuilder,
               private _authService: AuthService,
-              private  _snack:MatSnackBar) {
+              private  _snack:MatSnackBar,
+  ) {
   }
 
   form = this._formBuilder.group(
@@ -60,10 +61,9 @@ export class DefinitelyNotRegisterComponent implements OnInit {
     try {
       this.form.controls['phoneNumber'].patchValue(this.form.controls['phoneNumber'].value.toString());
       await this._authService.register(this.form.value);
-      this._snack.open('succes');
-    } catch (e) {
-      console.log(e);
-      this._snack.open(`${e}`);
+      this._snack.open('Succes','OK',{duration: 4000});
+    } catch (e:any) {
+      this._snack.open(e.error.toString(),'OK',{duration: 4000});
     }
   }
 
