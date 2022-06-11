@@ -12,8 +12,8 @@ using Server.Core.Database;
 namespace Server.Core.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220611115239_NewInitial")]
-    partial class NewInitial
+    [Migration("20220610193938_InitialMigrations")]
+    partial class InitialMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -179,14 +179,6 @@ namespace Server.Core.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("boolean");
 
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("boolean");
 
@@ -230,37 +222,6 @@ namespace Server.Core.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers", (string)null);
-                });
-
-            modelBuilder.Entity("Server.Core.Entities.Question", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("Answer")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<bool>("IsGrill")
-                        .HasColumnType("boolean");
-
-                    b.Property<string>("Option1")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Option2")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Option3")
-                        .HasColumnType("text");
-
-                    b.Property<string>("QuestionText")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Questions");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
