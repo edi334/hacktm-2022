@@ -11,6 +11,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatSliderModule} from "@angular/material/slider";
+import { DefinitelyNotLoginPageComponent } from './definitely-not-pages/definitely-not-login-page/definitely-not-login-page.component';
+import {MatButtonModule} from "@angular/material/button";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
@@ -18,6 +21,7 @@ import {MatSliderModule} from "@angular/material/slider";
     DefinitelyNotHomePageComponent,
     DefinitelyNotTopBarComponent,
     DefinitelyNotRegisterComponent
+    DefinitelyNotLoginPageComponent
   ],
     imports: [
         BrowserModule,
@@ -28,6 +32,8 @@ import {MatSliderModule} from "@angular/material/slider";
         BrowserAnimationsModule,
         MatSliderModule,
         FormsModule
+        MatButtonModule,
+        MatToolbarModule,
     ],
   providers: [],
   bootstrap: [AppComponent]

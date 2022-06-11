@@ -4,6 +4,9 @@ import {DefinitelyNotHomePageComponent} from "./definitely-not-pages/definitely-
 import {
   DefinitelyNotRegisterComponent
 } from "./definitely-not-pages/definitely-not-register/definitely-not-register.component";
+import {
+  DefinitelyNotLoginPageComponent
+} from "./definitely-not-pages/definitely-not-login-page/definitely-not-login-page.component";
 
 
 const routes: Routes = [
@@ -16,6 +19,12 @@ const routes: Routes = [
   {
     path:'register',
     component:DefinitelyNotRegisterComponent,
+  },
+
+  {
+    path: 'login',
+    component: DefinitelyNotLoginPageComponent,
+    pathMatch: 'full'
   },
 
   {

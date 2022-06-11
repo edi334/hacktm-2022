@@ -1,18 +1,15 @@
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
- @import "~@angular/material/prebuilt-themes/indigo-pink.css";
- @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
- @import "~@angular/material/prebuilt-themes/purple-green.css";
+/*@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+@import "~@angular/material/prebuilt-themes/purple-green.css";*/
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
-body{
-  background: green;
-}
-
-.full-width{
-  width: 100%;
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
 form{
   display: flex;
   flex-direction: column;
 }
-
