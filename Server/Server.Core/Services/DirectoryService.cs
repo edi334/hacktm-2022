@@ -15,6 +15,16 @@ public class DirectoryService : IDirectoryService
         _applicationDbContext = applicationDbContext;
     }
 
+    public async Task<ActionResponse<List<Directory>>> GetAll()
+    {
+        var response = new ActionResponse<List<Directory>>();
+
+        var directories = await _applicationDbContext.Directories.ToListAsync();
+        response.Item = directories;
+
+        return response;
+    }
+
     public async Task<ActionResponse<Directory>> AddDirectory(Directory directory)
     {
         var response = new ActionResponse<Directory>();

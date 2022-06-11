@@ -48,6 +48,43 @@ public class DirectoryController : ControllerBase
         return Response(response);
     }
 
+    [HttpGet("generate-box-position")]
+    public async Task<ActionResult> GenerateBoxPosition()
+    {
+        var response = await _directoryService.GetAll();
+
+        var parentId = "-1";
+        
+        Random random = new Random();
+        var maxLevel = response.Item.Max(d => d.Level);
+
+        int boxLevel = random.Next(0, maxLevel + 1);
+
+        var ids = new List<string>();
+
+        if (boxLevel != 0)
+        {
+            ids = response.Item
+                .Where(d => d.Level == boxLevel - 1)
+                .Select(d => d.Id.ToString())
+                .ToList();
+            
+            var index = random.Next(ids.Count);
+            parentId = ids[index];
+        }
+
+        var directory = new Directory
+        {
+            Title = "Box of Nothing",
+            Level = boxLevel,
+            ParentId = parentId
+        };
+
+        var boxResponse = await _directoryService.AddDirectory(directory);
+
+        return Ok(boxResponse.Item);
+    }
+
     private ActionResult Response(ActionResponse<List<Directory>> response)
     {
         if (response.HasErrors())
