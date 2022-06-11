@@ -24,7 +24,6 @@ const routes: Routes = [
   {
     path: 'login',
     component: DefinitelyNotLoginPageComponent,
-    pathMatch: 'full'
   },
 
   {
@@ -32,7 +31,6 @@ const routes: Routes = [
     component: DefinitelyNotHomePageComponent,
     pathMatch: 'full'
   },
-
 ];
 
 @NgModule({

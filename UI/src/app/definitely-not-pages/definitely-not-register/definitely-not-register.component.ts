@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {AuthService} from "../../definitely-not-services/auth.service";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-definitely-not-register',
@@ -9,7 +11,9 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 export class DefinitelyNotRegisterComponent implements OnInit {
 
 
-  constructor(private _formBuilder: FormBuilder) {
+  constructor(private _formBuilder: FormBuilder,
+              private _authService: AuthService,
+              private  _snack:MatSnackBar) {
   }
 
   form = this._formBuilder.group(
@@ -17,7 +21,9 @@ export class DefinitelyNotRegisterComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
       confirmPassword: ['', [Validators.required]],
-      phoneNumber: ['', [Validators.required]]
+      phoneNumber: ['', [Validators.required]],
+      firstName:['', [Validators.required]],
+      lastName:['', [Validators.required]]
     },
     {
       validators: this.mustMatch('password', 'confirmPassword')
@@ -45,10 +51,20 @@ export class DefinitelyNotRegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submit() {
+  async submit() {
 
-    if (this.form.valid && this.form.controls['phoneNumber'].value !== 100000000)
+    if (!this.form.valid || this.form.controls['phoneNumber'].value == 100000000){
       console.log(this.form.controls['phoneNumber'].value);
+    return}
+
+    try {
+      this.form.controls['phoneNumber'].patchValue(this.form.controls['phoneNumber'].value.toString());
+      await this._authService.register(this.form.value);
+      this._snack.open('succes');
+    } catch (e) {
+      console.log(e);
+      this._snack.open(`${e}`);
+    }
   }
 
 }

@@ -11,7 +11,7 @@
     </mat-error>
   </ng-container>
   <mat-form-field>
-    <input formControlName="password" matInput placeholder="password" type="password">
+    <input formControlName="password" matInput placeholder="Password" type="password">
   </mat-form-field>
   <ng-container *ngIf="!form.controls['password'].untouched && form.controls['password'].errors">
     <mat-error *ngIf="form.controls['password'].errors['required']">
@@ -30,7 +30,7 @@
       Password must match
     </mat-error>
   </ng-container>
-    <mat-label>phone</mat-label>
+    <mat-label>Phone *</mat-label>
     <mat-slider [displayWith]="formatLabel" thumbLabel min="100000000" max="999999999" aria-label="units"
                 formControlName="phoneNumber"></mat-slider>
     <ng-container *ngIf="!form.controls['phoneNumber'].untouched && form.controls['phoneNumber'].errors">
@@ -38,5 +38,21 @@
         Field is required
       </mat-error>
     </ng-container>
+  <mat-form-field>
+    <input formControlName="firstName" matInput placeholder="First Name">
+  </mat-form-field>
+  <ng-container *ngIf="!form.controls['firstName'].untouched && form.controls['firstName'].errors">
+    <mat-error *ngIf="form.controls['firstName'].errors['required']">
+      Field is required
+    </mat-error>
+  </ng-container>
+  <mat-form-field>
+    <input formControlName="lastName" matInput placeholder="Last Name" >
+  </mat-form-field>
+  <ng-container *ngIf="!form.controls['lastName'].untouched && form.controls['lastName'].errors">
+    <mat-error *ngIf="form.controls['lastName'].errors['required']">
+      Field is required
+    </mat-error>
+  </ng-container>
     <button (click)="submit()">submit</button>
 </form>
