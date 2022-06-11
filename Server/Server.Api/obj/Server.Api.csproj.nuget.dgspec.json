@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/keyusho/hektm/hacktm-2022/Server/Server.Api/Server.Api.csproj": {}
+    "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Api/Server.Api.csproj": {}
   },
   "projects": {
-    "/home/keyusho/hektm/hacktm-2022/Server/Server.Api/Server.Api.csproj": {
+    "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Api/Server.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/keyusho/hektm/hacktm-2022/Server/Server.Api/Server.Api.csproj",
+        "projectUniqueName": "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Api/Server.Api.csproj",
         "projectName": "Server.Api",
-        "projectPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Api/Server.Api.csproj",
-        "packagesPath": "/home/keyusho/.nuget/packages/",
-        "outputPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Api/obj/",
+        "projectPath": "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Api/Server.Api.csproj",
+        "packagesPath": "/home/alex/.nuget/packages/",
+        "outputPath": "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/keyusho/.nuget/NuGet/NuGet.Config"
+          "/home/alex/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,13 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-<<<<<<< HEAD
-              "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
-                "projectPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj"
-=======
-              "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
-                "projectPath": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/Server.Core.csproj"
->>>>>>> DefenetliNotAFrontendBranch
+              "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
+                "projectPath": "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Core/Server.Core.csproj"
               }
             }
           }
@@ -98,21 +93,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/168/sdk/6.0.300/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
+    "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj",
+        "projectUniqueName": "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Core/Server.Core.csproj",
         "projectName": "Server.Core",
-        "projectPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj",
-        "packagesPath": "/home/keyusho/.nuget/packages/",
-        "outputPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/obj/",
+        "projectPath": "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Core/Server.Core.csproj",
+        "packagesPath": "/home/alex/.nuget/packages/",
+        "outputPath": "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/keyusho/.nuget/NuGet/NuGet.Config"
+          "/home/alex/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -168,7 +163,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/168/sdk/6.0.300/RuntimeIdentifierGraph.json"
         }
       }
     },

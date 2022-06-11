@@ -31,6 +31,8 @@ import { DefinitelyNotQuizPageComponent } from './definitely-not-pages/definitel
 import { DefinitelyNotAButtonComponent } from './shared/definitely-not-a-button/definitely-not-a-button.component';
 import {HttpClientModule} from "@angular/common/http";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { DefinitelyNotAButtonComponent } from './shared/definitely-not-a-button/definitely-not-a-button.component';
+import { DefinitelyNotCaptchaComponent } from './definitely-not-pages/definitely-not-captcha/definitely-not-captcha.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     DefinitelyNotTopBarComponent,
     DefinitelyNotRegisterComponent,
     DefinitelyNotLoginPageComponent,
-    DefinitelyNotAButtonComponent
+    DefinitelyNotAButtonComponent,
+    DefinitelyNotCaptchaComponent
     DefinitelyNotQuizPageComponent
   ],
   imports: [

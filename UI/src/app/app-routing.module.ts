@@ -8,6 +8,9 @@ import {
 import {
   DefinitelyNotLoginPageComponent
 } from "./definitely-not-pages/definitely-not-login-page/definitely-not-login-page.component";
+import {
+  DefinitelyNotCaptchaComponent
+} from "./definitely-not-pages/definitely-not-captcha/definitely-not-captcha.component";
 
 
 const routes: Routes = [
@@ -30,6 +33,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: DefinitelyNotLoginPageComponent,
+  },
+  {
+    path: 'captcha',
+    component: DefinitelyNotCaptchaComponent,
   },
 
   {

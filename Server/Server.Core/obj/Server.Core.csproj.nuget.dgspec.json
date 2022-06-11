@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj": {}
+    "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Core/Server.Core.csproj": {}
   },
   "projects": {
-    "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
+    "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj",
+        "projectUniqueName": "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Core/Server.Core.csproj",
         "projectName": "Server.Core",
-        "projectPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj",
-        "packagesPath": "/home/keyusho/.nuget/packages/",
-        "outputPath": "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/obj/",
+        "projectPath": "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Core/Server.Core.csproj",
+        "packagesPath": "/home/alex/.nuget/packages/",
+        "outputPath": "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/keyusho/.nuget/NuGet/NuGet.Config"
+          "/home/alex/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -70,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/168/sdk/6.0.300/RuntimeIdentifierGraph.json"
         }
       }
     }
