@@ -24,7 +24,6 @@ const routes: Routes = [
   {
     path: 'login',
     component: DefinitelyNotLoginPageComponent,
-    pathMatch: 'full'
   },
 
   {

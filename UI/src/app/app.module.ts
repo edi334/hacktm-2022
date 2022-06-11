@@ -22,6 +22,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {HttpClientModule} from "@angular/common/http";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { DefinitelyNotAButtonComponent } from './shared/definitely-not-a-button/definitely-not-a-button.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     DefinitelyNotHomePageComponent,
     DefinitelyNotTopBarComponent,
     DefinitelyNotRegisterComponent,
-    DefinitelyNotLoginPageComponent
+    DefinitelyNotLoginPageComponent,
+    DefinitelyNotAButtonComponent
   ],
   imports: [
     BrowserModule,

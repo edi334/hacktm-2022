@@ -16,15 +16,12 @@ form > * {
   align-items: center;
 }
 
-button {
-  width: 125px;
-  padding: 0px 20px 0px 20px;
-  border-radius: 25px;
-  background-color: #D9D9D9;
-  color: #000000;
-  font-weight: bolder;
-  font-size: medium;
-  margin: 0 auto;
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 20%;
 }
 
 mat-form-field {
