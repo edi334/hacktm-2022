@@ -1,0 +1,23 @@
+.form-container {
+  background-color: #F5F5F5;
+}
+
+form > *:not(h1) {
+  margin-bottom: 30px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 125px;
+  padding: 0px 20px 0px 20px;
+  border-radius: 25px;
+  background-color: #D9D9D9;
+  color: #000000;
+  font-weight: bolder;
+  font-size: medium;
+}
