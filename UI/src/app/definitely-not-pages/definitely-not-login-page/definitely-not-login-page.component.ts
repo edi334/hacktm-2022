@@ -29,8 +29,9 @@ export class DefinitelyNotLoginPageComponent implements OnInit {
 
   async onSubmit() {
     if (!this.loginForm.valid) {
+      console.log(this.loginForm.value);
       this._snack.open('Check form','OK',{duration: 4000});
-      return
+      return;
     }
    try{
      await this._authService.login(this.loginForm.value);
