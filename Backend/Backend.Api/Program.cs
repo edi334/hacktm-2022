@@ -3,11 +3,11 @@ using Backend.Core.Database;
 using Backend.Core.Entities;
 using Backend.Core.Services;
 using Backend.Core.Services.Interfaces;
+using Backend.Utils;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using Server.Utils;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
