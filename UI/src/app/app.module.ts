@@ -19,37 +19,34 @@ import {
 } from './definitely-not-pages/definitely-not-login-page/definitely-not-login-page.component';
 import {MatButtonModule} from "@angular/material/button";
 import {MatToolbarModule} from "@angular/material/toolbar";
-import { DefinitelyNotQuizPageComponent } from './definitely-not-pages/definitely-not-quiz-page/definitely-not-quiz-page.component';
-import {MatRadioModule} from "@angular/material/radio";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatIconModule} from "@angular/material/icon";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatRadioModule} from "@angular/material/radio";
+import { DefinitelyNotQuizPageComponent } from './definitely-not-pages/definitely-not-quiz-page/definitely-not-quiz-page.component';
+import { DefinitelyNotAButtonComponent } from './shared/definitely-not-a-button/definitely-not-a-button.component';
 import {HttpClientModule} from "@angular/common/http";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import { DefinitelyNotAButtonComponent } from './shared/definitely-not-a-button/definitely-not-a-button.component';
+import { DefinitelyNotCaptchaComponent } from './definitely-not-pages/definitely-not-captcha/definitely-not-captcha.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DefinitelyNotHomePageComponent,
     DefinitelyNotTopBarComponent,
-    DefinitelyNotQuizPageComponent,
     DefinitelyNotRegisterComponent,
     DefinitelyNotLoginPageComponent,
-    DefinitelyNotAButtonComponent
+    DefinitelyNotAButtonComponent,
+    DefinitelyNotCaptchaComponent
+    DefinitelyNotQuizPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatToolbarModule,
-    MatRadioModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatButtonModule,
-    MatIconModule,
-    FormsModule,
-    FontAwesomeModule,
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
@@ -61,6 +58,8 @@ import { DefinitelyNotAButtonComponent } from './shared/definitely-not-a-button/
     HttpClientModule,
     MatSnackBarModule
   ],
+    FontAwesomeModule
+    MatRadioModule,
   providers: [],
   bootstrap: [AppComponent]
 })
