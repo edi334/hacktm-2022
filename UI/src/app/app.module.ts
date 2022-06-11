@@ -10,6 +10,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {MatToolbarModule} from "@angular/material/toolbar";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,13 +19,14 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     DefinitelyNotTopBarComponent,
     DefinitelyNotLoginPageComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatToolbarModule
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatToolbarModule,
+        ReactiveFormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
