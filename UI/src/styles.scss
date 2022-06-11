@@ -2,3 +2,17 @@
  @import "~@angular/material/prebuilt-themes/indigo-pink.css";
  @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
  @import "~@angular/material/prebuilt-themes/purple-green.css";
+
+body{
+  background: green;
+}
+
+.full-width{
+  width: 100%;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+

@@ -5,17 +5,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DefinitelyNotHomePageComponent } from './definitely-not-pages/definitely-not-home-page/definitely-not-home-page.component';
 import { DefinitelyNotTopBarComponent } from './shared/definitely-not-top-bar/definitely-not-top-bar.component';
+import { DefinitelyNotRegisterComponent } from './definitely-not-pages/definitely-not-register/definitely-not-register.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatSliderModule} from "@angular/material/slider";
 
 @NgModule({
   declarations: [
     AppComponent,
     DefinitelyNotHomePageComponent,
-    DefinitelyNotTopBarComponent
+    DefinitelyNotTopBarComponent,
+    DefinitelyNotRegisterComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        MatFormFieldModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        BrowserAnimationsModule,
+        MatSliderModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
