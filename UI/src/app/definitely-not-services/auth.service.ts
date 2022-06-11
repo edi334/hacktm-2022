@@ -60,7 +60,7 @@ export class AuthService {
     }
   }
 
-    async register(data: IRegister): Promise<any>{
+  async register(data: IRegister): Promise<any>{
     const url = this._apiUrl + "Auth/register";
     return firstValueFrom(this._http.post(url, data,{responseType: 'text'}));
   }

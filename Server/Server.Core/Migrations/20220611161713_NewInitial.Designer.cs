@@ -12,7 +12,7 @@ using Server.Core.Database;
 namespace Server.Core.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220611115239_NewInitial")]
+    [Migration("20220611161713_NewInitial")]
     partial class NewInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -230,6 +230,28 @@ namespace Server.Core.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("Server.Core.Entities.Directory", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("ParentId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Directories");
                 });
 
             modelBuilder.Entity("Server.Core.Entities.Question", b =>

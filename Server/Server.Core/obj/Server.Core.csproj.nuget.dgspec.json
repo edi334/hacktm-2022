@@ -1,6 +1,22 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/Server.Core.csproj": {}
+  },
+  "projects": {
+    "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/Server.Core.csproj",
+        "projectName": "Server.Core",
+        "projectPath": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/Server.Core.csproj",
+        "packagesPath": "/Users/eduardcziszter/.nuget/packages/",
+        "outputPath": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/eduardcziszter/.nuget/NuGet/NuGet.Config"
+=======
     "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Core/Server.Core.csproj": {}
   },
   "projects": {
@@ -15,6 +31,7 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/alex/.nuget/NuGet/NuGet.Config"
+>>>>>>> DefenetliNotAFrontendBranch
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -70,7 +87,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.101/RuntimeIdentifierGraph.json"
+=======
           "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/168/sdk/6.0.300/RuntimeIdentifierGraph.json"
+>>>>>>> DefenetliNotAFrontendBranch
         }
       }
     }

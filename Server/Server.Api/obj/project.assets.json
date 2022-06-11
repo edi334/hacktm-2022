@@ -1739,11 +1739,25 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
+    "/Users/eduardcziszter/.nuget/packages/": {}
+=======
     "/home/alex/.nuget/packages/": {}
+>>>>>>> DefenetliNotAFrontendBranch
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Api/Server.Api.csproj",
+      "projectName": "Server.Api",
+      "projectPath": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Api/Server.Api.csproj",
+      "packagesPath": "/Users/eduardcziszter/.nuget/packages/",
+      "outputPath": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Api/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/eduardcziszter/.nuget/NuGet/NuGet.Config"
+=======
       "projectUniqueName": "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Api/Server.Api.csproj",
       "projectName": "Server.Api",
       "projectPath": "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Api/Server.Api.csproj",
@@ -1752,6 +1766,7 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/alex/.nuget/NuGet/NuGet.Config"
+>>>>>>> DefenetliNotAFrontendBranch
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1763,6 +1778,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+<<<<<<< HEAD
+            "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
+              "projectPath": "/Users/eduardcziszter/Documents/Projects/hacktm-2022/Server/Server.Core/Server.Core.csproj"
+=======
 <<<<<<< Updated upstream
 <<<<<<< HEAD
             "/home/keyusho/hektm/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
@@ -1775,6 +1794,7 @@
             "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Core/Server.Core.csproj": {
               "projectPath": "/home/alex/Desktop/Project/hacktm-2022/Server/Server.Core/Server.Core.csproj"
 >>>>>>> Stashed changes
+>>>>>>> DefenetliNotAFrontendBranch
             }
           }
         }
@@ -1840,7 +1860,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.101/RuntimeIdentifierGraph.json"
+=======
         "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/168/sdk/6.0.300/RuntimeIdentifierGraph.json"
+>>>>>>> DefenetliNotAFrontendBranch
       }
     }
   }
