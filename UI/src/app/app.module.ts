@@ -19,12 +19,17 @@ import {
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatFormFieldModule} from "@angular/material/form-field";
-import { DefinitelyNotQuizPageComponent } from './definitely-not-pages/definitely-not-quiz-page/definitely-not-quiz-page.component';
-import { DefinitelyNotAButtonComponent } from './shared/definitely-not-a-button/definitely-not-a-button.component';
+import {
+  DefinitelyNotQuizPageComponent
+} from './definitely-not-pages/definitely-not-quiz-page/definitely-not-quiz-page.component';
+import {DefinitelyNotAButtonComponent} from './shared/definitely-not-a-button/definitely-not-a-button.component';
 import {HttpClientModule} from "@angular/common/http";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
-import { DefinitelyNotCaptchaComponent } from './definitely-not-pages/definitely-not-captcha/definitely-not-captcha.component';
+import {
+  DefinitelyNotCaptchaComponent
+} from './definitely-not-pages/definitely-not-captcha/definitely-not-captcha.component';
 import {MatRadioModule} from '@angular/material/radio';
+import {WeatherComponent} from './definitely-not-components/weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,8 @@ import {MatRadioModule} from '@angular/material/radio';
     DefinitelyNotLoginPageComponent,
     DefinitelyNotAButtonComponent,
     DefinitelyNotCaptchaComponent,
-    DefinitelyNotQuizPageComponent
+    DefinitelyNotQuizPageComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
