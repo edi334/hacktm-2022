@@ -30,6 +30,7 @@
 
       <div class="button-container">
         <app-definitely-not-a-button [text]="'Login'" (click)="onSubmit()"></app-definitely-not-a-button>
+        <app-definitely-not-a-button [text]="'Forgot password'" [routerLink]="'/reset-pass'"></app-definitely-not-a-button>
         <app-definitely-not-a-button [text]="'Sign up'" [routerLink]="'/register'"></app-definitely-not-a-button>
       </div>
     </form>
