@@ -1,0 +1,39 @@
+.content-container {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+mat-form-field {
+  border-radius: 25px;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.content-title-container {
+  display: table;
+  padding-bottom: 40px;
+}
+
+.whiteColor {
+  background-color: white !important;
+}
+
+.response{
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.response-container{
+  display: table;
+  padding-bottom: 50px;
+}

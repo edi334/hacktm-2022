@@ -33,6 +33,8 @@ import { DefinitelyNotFolderComponent } from './definitely-not-pages/definitely-
 import { DefinitelyNotBoxPopupComponent } from './definitely-not-pages/definitely-not-home-page/definitely-not-box-popup/definitely-not-box-popup.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {WeatherComponent} from './definitely-not-components/weather/weather.component';
+import { RomanescuComponent } from './definitely-not-components/romanescu/romanescu.component';
+import { DeviceComponent } from './definitely-not-components/device/device.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import {WeatherComponent} from './definitely-not-components/weather/weather.comp
     DefinitelyNotFolderComponent,
     DefinitelyNotBoxPopupComponent,
     DefinitelyNotQuizPageComponent,
-    WeatherComponent
+    WeatherComponent,
+    RomanescuComponent,
+    DeviceComponent
   ],
   imports: [
     BrowserModule,
