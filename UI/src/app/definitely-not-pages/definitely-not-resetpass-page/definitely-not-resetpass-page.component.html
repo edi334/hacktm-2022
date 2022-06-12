@@ -1,0 +1,19 @@
+<div class="d-flex flex-row justify-content-between align-content-around h-100">
+  <div [style.background-color]="'#F5F5F5'" [style.width]="'40%'">
+    <div class="d-flex flex-column justify-content-center m-auto w-75 h-100 inner-container">
+      <h1 class="mb-3">You definitley don't remember your password?</h1>
+      <mat-form-field appearance="outline">
+        <mat-label><b>Definitely not</b> password</mat-label>
+        <input matInput type="password" [(ngModel)]="inputPass"/>
+      </mat-form-field>
+      <app-definitely-not-a-button [text]="'Don\'t remember'" (click)="setter()" class="mb-3"></app-definitely-not-a-button>
+      <div class="text-center mb-3">
+        <h3>Then, this is your password:</h3>
+        <h3>{{ this.inputPass !== '' ? newPass : ''}}</h3>
+      </div>
+    </div>
+  </div>
+  <div class="logo-container">
+    <img src="assets/logo/definitely-not-a-logo.svg" width="90%">
+  </div>
+</div>

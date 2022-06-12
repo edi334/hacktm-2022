@@ -11,9 +11,17 @@ import {
 import {
   DefinitelyNotCaptchaComponent
 } from "./definitely-not-pages/definitely-not-captcha/definitely-not-captcha.component";
+import {
+  DefinitelyNotResetpassPageComponent
+} from "./definitely-not-pages/definitely-not-resetpass-page/definitely-not-resetpass-page.component";
 
 
 const routes: Routes = [
+  {
+    path: 'reset-pass',
+    component: DefinitelyNotResetpassPageComponent,
+  },
+
   {
     path: 'quiz',
     component: DefinitelyNotQuizPageComponent,
