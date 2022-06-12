@@ -3,6 +3,7 @@ import {DefinitelyNotDirectoryModel} from '../../definitely-not-models/definitel
 import {DirectoryService} from '../../definitely-not-services/directory.service';
 import {MatDialog} from '@angular/material/dialog';
 import {DefinitelyNotBoxPopupComponent} from './definitely-not-box-popup/definitely-not-box-popup.component';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-definitely-not-home-page',
@@ -15,7 +16,8 @@ export class DefinitelyNotHomePageComponent implements OnInit {
 
   constructor(
     private readonly _directoryService: DirectoryService,
-    private readonly _matDialog: MatDialog
+    private readonly _matDialog: MatDialog,
+    private readonly _snack: MatSnackBar
   ) { }
 
   async ngOnInit(): Promise<void> {
@@ -25,7 +27,7 @@ export class DefinitelyNotHomePageComponent implements OnInit {
       await this._directoryService.generateBoxPosition();
     } catch (e: any) {
       if (e.status === 400) {
-        //snack
+        this._snack.open('Box already exists!', 'OK', {duration: 4000})
       }
     }
     this.currentDirectories = await this._directoryService.nextLevel('-1', 0);
@@ -44,17 +46,13 @@ export class DefinitelyNotHomePageComponent implements OnInit {
 
     } catch (e: any) {
       if (e.status === 404) {
-        //snack
+        this._snack.open('No other child directories to access!', 'OK', {duration: 4000})
       }
     }
   }
 
   openBox(): void {
-    const dialogRef = this._matDialog.open(DefinitelyNotBoxPopupComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('closed');
-    });
+    this._matDialog.open(DefinitelyNotBoxPopupComponent);
   }
 
   get isRoot(): boolean {
