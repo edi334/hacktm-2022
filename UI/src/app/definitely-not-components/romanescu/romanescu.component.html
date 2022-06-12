@@ -1,0 +1,17 @@
+<div class="content-container d-flex flex-column justify-content-center">
+  <div class="content-title-container align-items-center w-100">
+    <p class="title">What is your Romanian name?</p>
+  </div>
+  <p style="font-size: 20px; font-weight: 600">Name</p>
+  <div class="">
+    <mat-form-field appearance="outline">
+      <input matInput type="text" [(ngModel)]="name"/>
+    </mat-form-field>
+    <div class="button-container d-flex justify-content-center">
+      <app-definitely-not-a-button [whiteColor]=true text="CHECK" (click)="setCheck()"></app-definitely-not-a-button>
+    </div>
+    <div class="response-container align-items-center w-100">
+      <p class="response">{{isChecked ? 'Your Romanian name is ' + name + 'escu' : ''}}</p>
+    </div>
+  </div>
+</div>

@@ -34,6 +34,8 @@ import { DefinitelyNotBoxPopupComponent } from './definitely-not-pages/definitel
 import {MatDialogModule} from '@angular/material/dialog';
 import {WeatherComponent} from './definitely-not-components/weather/weather.component';
 import { DefinitelyNotResetpassPageComponent } from './definitely-not-pages/definitely-not-resetpass-page/definitely-not-resetpass-page.component';
+import { RomanescuComponent } from './definitely-not-components/romanescu/romanescu.component';
+import { DeviceComponent } from './definitely-not-components/device/device.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,10 @@ import { DefinitelyNotResetpassPageComponent } from './definitely-not-pages/defi
     DefinitelyNotBoxPopupComponent,
     DefinitelyNotQuizPageComponent,
     WeatherComponent,
-    DefinitelyNotResetpassPageComponent
+    DefinitelyNotResetpassPageComponent,
+    WeatherComponent,
+    RomanescuComponent,
+    DeviceComponent
   ],
   imports: [
     BrowserModule,
