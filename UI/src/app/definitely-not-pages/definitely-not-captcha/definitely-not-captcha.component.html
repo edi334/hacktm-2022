@@ -1,4 +1,14 @@
-<p>Verify that you are definitley not a robot</p>
-<img [src]="images[random]" class="w-25 h-25">
-<input matInput placeholder="Write the solution" [(ngModel)]="solution">
-<button (click)="submit()">Submit</button>
+<div class="d-flex flex-row  align-content-around h-100"
+     [style.background-image]="'url(assets/background.svg)'">
+  <div [style.background-color]="'#F5F5F5'" [style.width]="'40%'">
+    <div class="inner-container d-flex flex-column justify-content-center m-auto py-4 w-75 h-100">
+      <h1 class="mb-4">Verify that you are definitley not a robot.</h1>
+      <img [src]="images[random]" class="w-100 h-25 mb-4">
+      <mat-form-field appearance="outline">
+        <mat-label>Write the solution</mat-label>
+        <input matInput [(ngModel)]="solution">
+      </mat-form-field>
+      <app-definitely-not-a-button [text]="'Submit'" (click)="submit()" [style.margin]="'0 auto'"></app-definitely-not-a-button>
+    </div>
+  </div>
+</div>

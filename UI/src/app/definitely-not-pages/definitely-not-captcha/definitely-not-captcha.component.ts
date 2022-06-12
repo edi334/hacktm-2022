@@ -8,9 +8,12 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 })
 export class DefinitelyNotCaptchaComponent implements OnInit {
 
-  images: string[] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  numbers: string[] = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  imagesPath = 'assets/math/';
   random: number = Math.trunc((Math.random() * 10));
   solution: string='';
+  images: string[] = this.numbers.map(n => this.imagesPath + n + '.jpg');
+
 
   constructor(private _snack:MatSnackBar) {
   }

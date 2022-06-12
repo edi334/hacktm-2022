@@ -1,6 +1,6 @@
 <div class="d-flex flex-row justify-content-between align-content-around h-100">
   <div [style.background-color]="'#F5F5F5'" [style.width]="'40%'">
-    <form class="d-flex flex-column justify-content-center m-auto p-5 w-75 h-100"
+    <form class="d-flex flex-column justify-content-center m-auto w-75 h-100"
     [formGroup]="loginForm"
     >
       <h1>Definitely<br>not login.</h1>
@@ -9,11 +9,24 @@
         <mat-label><b>Definitely not</b> email</mat-label>
         <input matInput type="email" formControlName="email"/>
       </mat-form-field>
+      <ng-container *ngIf="!loginForm.controls['email'].untouched && loginForm.controls['email'].errors">
+        <mat-error *ngIf="loginForm.controls['email'].errors['required']">
+          Field is required
+        </mat-error>
+        <mat-error *ngIf="loginForm.controls['email'].errors['email']">
+          Invalid email
+        </mat-error>
+      </ng-container>
 
       <mat-form-field appearance="outline">
         <mat-label><b>Definitely not</b> password</mat-label>
         <input matInput type="password" formControlName="password"/>
       </mat-form-field>
+      <ng-container *ngIf="!loginForm.controls['password'].untouched && loginForm.controls['password'].errors">
+        <mat-error *ngIf="loginForm.controls['password'].errors['required']">
+          Field is required
+        </mat-error>
+      </ng-container>
 
       <div class="button-container">
         <app-definitely-not-a-button [text]="'Login'" (click)="onSubmit()"></app-definitely-not-a-button>
