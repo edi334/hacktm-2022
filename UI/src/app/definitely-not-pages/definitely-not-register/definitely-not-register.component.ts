@@ -62,7 +62,7 @@ export class DefinitelyNotRegisterComponent implements OnInit {
     try {
       this.form.controls['phoneNumber'].patchValue(this.form.controls['phoneNumber'].value.toString());
       await this._authService.register(this.form.value);
-      this._router.navigateByUrl('/captcha')
+      await this._router.navigateByUrl('/captcha')
     } catch (e:any) {
       this._snack.open(e.error.toString(),'OK',{duration: 4000});
     }

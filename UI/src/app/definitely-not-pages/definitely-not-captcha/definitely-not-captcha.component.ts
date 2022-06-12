@@ -23,12 +23,11 @@ export class DefinitelyNotCaptchaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submit(){
-    if(this.solution==='the solution'){
-      this._snack.open('Succes','OK',{duration: 4000});
-      this._router.navigateByUrl('/login');
-    }
-    else this._snack.open('Wrong','OK',{duration: 4000});
+  async submit() {
+    if (this.solution === 'the solution') {
+      this._snack.open('Succes', 'OK', {duration: 4000});
+      await this._router.navigateByUrl('/login');
+    } else this._snack.open('Wrong', 'OK', {duration: 4000});
   }
 
 }
