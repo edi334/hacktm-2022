@@ -32,7 +32,7 @@ export class DefinitelyNotHomePageComponent implements OnInit {
     }
     this.loading = true;
     try {
-      await this._directoryService.deleteBox();
+      // await this._directoryService.deleteBox();
       await this._directoryService.generateBoxPosition();
     } catch (e: any) {
       if (e.status === 400) {
