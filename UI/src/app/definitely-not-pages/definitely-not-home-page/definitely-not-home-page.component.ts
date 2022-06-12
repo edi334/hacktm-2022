@@ -36,7 +36,7 @@ export class DefinitelyNotHomePageComponent implements OnInit {
       await this._directoryService.generateBoxPosition();
     } catch (e: any) {
       if (e.status === 400) {
-        this._snack.open('Box already exists!', 'OK', {duration: 4000})
+        // this._snack.open('Box already exists!', 'OK', {duration: 4000})
       }
     }
     this.currentDirectories = await this._directoryService.nextLevel('-1', 0);
