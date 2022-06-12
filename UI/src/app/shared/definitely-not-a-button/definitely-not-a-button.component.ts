@@ -8,6 +8,7 @@ import {Component, Input} from '@angular/core';
 export class DefinitelyNotAButtonComponent  {
   @Input()
   public text: string;
+  @Input() public whiteColor: boolean=false;
 
   constructor() { }
 

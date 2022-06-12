@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DefinitelyNotDirectoryModel} from '../../definitely-not-models/definitely-not-directory-model';
 import {DirectoryService} from '../../definitely-not-services/directory.service';
-import {WeatherService} from "../../definitely-not-services/weather.service";
 
 @Component({
   selector: 'app-definitely-not-home-page',
@@ -13,11 +12,9 @@ export class DefinitelyNotHomePageComponent implements OnInit {
 
   constructor(
     private readonly _directoryService: DirectoryService,
-    private readonly _weather:WeatherService
   ) { }
 
   async ngOnInit(): Promise<void> {
-    console.log(await this._weather.getWeather());
     //await this._directoryService.generateBoxPosition();
     // this.currentDirectories = await this._directoryService.nextLevel('-1', 0);
   }
