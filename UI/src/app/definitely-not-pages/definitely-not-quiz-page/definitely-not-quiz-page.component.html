@@ -42,7 +42,7 @@
                                                                                src="assets/image/arrow_right.svg"
                                                                                alt="<-"/></button>
 
-    <app-definitely-not-a-button text="CheckAnswer"></app-definitely-not-a-button>
+    <app-definitely-not-a-button (click)="checkAnswer()" text="CheckAnswer"></app-definitely-not-a-button>
 
     <button class="icon-wrapper" (click)="changeCurrentQuestion(index+1)"><img class="arrow-icon"
                                                                                src="assets/image/arrow_left.svg"
