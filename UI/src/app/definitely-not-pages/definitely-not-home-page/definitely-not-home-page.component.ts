@@ -4,6 +4,8 @@ import {DirectoryService} from '../../definitely-not-services/directory.service'
 import {MatDialog} from '@angular/material/dialog';
 import {DefinitelyNotBoxPopupComponent} from './definitely-not-box-popup/definitely-not-box-popup.component';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {AuthService} from "../../definitely-not-services/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-definitely-not-home-page',
@@ -17,10 +19,17 @@ export class DefinitelyNotHomePageComponent implements OnInit {
   constructor(
     private readonly _directoryService: DirectoryService,
     private readonly _matDialog: MatDialog,
-    private readonly _snack: MatSnackBar
-  ) { }
+    private readonly _snack: MatSnackBar,
+    private readonly _authService: AuthService,
+    private readonly _router: Router
+  ) {
+  }
 
   async ngOnInit(): Promise<void> {
+    const log = await this._authService.isLoggedIn()
+    if (!log) {
+      await this._router.navigateByUrl('/login');
+    }
     this.loading = true;
     try {
       await this._directoryService.deleteBox();

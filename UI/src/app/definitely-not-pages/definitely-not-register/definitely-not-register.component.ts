@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../../definitely-not-services/auth.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-definitely-not-register',
@@ -13,6 +14,7 @@ export class DefinitelyNotRegisterComponent implements OnInit {
   constructor(private _formBuilder: FormBuilder,
               private _authService: AuthService,
               private  _snack:MatSnackBar,
+              private _router:Router
   ) {
   }
 
@@ -60,7 +62,7 @@ export class DefinitelyNotRegisterComponent implements OnInit {
     try {
       this.form.controls['phoneNumber'].patchValue(this.form.controls['phoneNumber'].value.toString());
       await this._authService.register(this.form.value);
-      this._snack.open('Succes','OK',{duration: 4000});
+      this._router.navigateByUrl('/captcha')
     } catch (e:any) {
       this._snack.open(e.error.toString(),'OK',{duration: 4000});
     }
