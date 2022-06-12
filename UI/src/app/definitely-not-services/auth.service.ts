@@ -6,7 +6,7 @@ import {environment} from "../../environments/environment";
 import {DefinitelyNotLoginModel} from "../definitely-not-models/definitely-not-login-model";
 import {DefinitelyNotSessionModel} from "../definitely-not-models/definitely-not-session-model";
 import {LocalStorage} from "@ngx-pwa/local-storage";
-import {IRegister} from "../definitely-not-interfaces/register";
+import {IRegister} from "../definitely-not-models/definitely-not-register-model";
 
 @Injectable({
   providedIn: 'root'

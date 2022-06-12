@@ -19,15 +19,20 @@ import {
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatFormFieldModule} from "@angular/material/form-field";
-import { DefinitelyNotQuizPageComponent } from './definitely-not-pages/definitely-not-quiz-page/definitely-not-quiz-page.component';
-import { DefinitelyNotAButtonComponent } from './shared/definitely-not-a-button/definitely-not-a-button.component';
+import {
+  DefinitelyNotQuizPageComponent
+} from './definitely-not-pages/definitely-not-quiz-page/definitely-not-quiz-page.component';
+import {DefinitelyNotAButtonComponent} from './shared/definitely-not-a-button/definitely-not-a-button.component';
 import {HttpClientModule} from "@angular/common/http";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
-import { DefinitelyNotCaptchaComponent } from './definitely-not-pages/definitely-not-captcha/definitely-not-captcha.component';
+import {
+  DefinitelyNotCaptchaComponent
+} from './definitely-not-pages/definitely-not-captcha/definitely-not-captcha.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { DefinitelyNotFolderComponent } from './definitely-not-pages/definitely-not-home-page/definitely-not-folder/definitely-not-folder.component';
 import { DefinitelyNotBoxPopupComponent } from './definitely-not-pages/definitely-not-home-page/definitely-not-box-popup/definitely-not-box-popup.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {WeatherComponent} from './definitely-not-components/weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -38,9 +43,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     DefinitelyNotLoginPageComponent,
     DefinitelyNotAButtonComponent,
     DefinitelyNotCaptchaComponent,
-    DefinitelyNotQuizPageComponent,
     DefinitelyNotFolderComponent,
-    DefinitelyNotBoxPopupComponent
+    DefinitelyNotBoxPopupComponent,
+    DefinitelyNotQuizPageComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,

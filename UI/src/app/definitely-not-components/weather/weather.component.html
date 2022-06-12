@@ -1,0 +1,12 @@
+<div class="weather-container">
+  <div class="location">Yesterday the weather in {{location}} was:</div>
+  <img src="./assets/image/Insorit.svg" *ngIf="conditionCode>=1030">
+  <img src="./assets/image/Inorat.svg" *ngIf="conditionCode==1003">
+  <img src="./assets/image/Inorat.svg" *ngIf="conditionCode==1000">
+  <h1>{{avg}}°C</h1>
+  <div class="temp">
+    <h4>Min:{{min}}°C</h4>
+    <app-definitely-not-a-button text="Refresh" [whiteColor]="true" (click)="setWeather()"></app-definitely-not-a-button>
+    <h4>Max:{{max}}°C</h4>
+  </div>
+</div>
