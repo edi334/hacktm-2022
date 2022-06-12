@@ -19,13 +19,18 @@ export class DirectoryService {
     return firstValueFrom(this._http.get<DefinitelyNotDirectoryModel[]>(url));
   }
 
-  async goBack(parentId: string, level: number): Promise<DefinitelyNotDirectoryModel[]> {
-    const url = this._apiUrl + `directory/go-back?parentId=${parentId}&level=${level}`;
+  async goBack(level: number): Promise<DefinitelyNotDirectoryModel[]> {
+    const url = this._apiUrl + `directory/go-back?level=${level}`;
     return firstValueFrom(this._http.get<DefinitelyNotDirectoryModel[]>(url));
   }
 
   async generateBoxPosition(): Promise<DefinitelyNotDirectoryModel> {
     const url = this._apiUrl + 'directory/generate-box-position';
     return firstValueFrom(this._http.get<DefinitelyNotDirectoryModel>(url));
+  }
+
+  async deleteBox(): Promise<DefinitelyNotDirectoryModel> {
+    const url = this._apiUrl + 'directory/delete-box';
+    return firstValueFrom(this._http.delete<DefinitelyNotDirectoryModel>(url));
   }
 }

@@ -25,6 +25,29 @@ public class DirectoryService : IDirectoryService
         return response;
     }
 
+    public async Task<ActionResponse<Directory>> DeleteBox()
+    {
+        var response = new ActionResponse<Directory>();
+
+        var box = await _applicationDbContext
+            .Directories
+            .FirstOrDefaultAsync(d => d.Title.Equals("Box of Nothing"));
+
+        if (box is null)
+        {
+            response.AddError("Box not found!");
+            return response;
+        }
+
+        var deleted = _applicationDbContext.Remove(box);
+
+        await _applicationDbContext.SaveChangesAsync();
+
+        response.Item = deleted.Entity;
+
+        return response;
+    }
+
     public async Task<ActionResponse<Directory>> AddDirectory(Directory directory)
     {
         var response = new ActionResponse<Directory>();
@@ -51,11 +74,11 @@ public class DirectoryService : IDirectoryService
         return response;
     }
 
-    public async Task<ActionResponse<List<Directory>>> GoBackwards(string parentId, int level)
+    public async Task<ActionResponse<List<Directory>>> GoBackwards(int level)
     {
         var directories = await _applicationDbContext
             .Directories
-            .Where(d => d.Id.ToString().Equals(parentId) && d.Level == level)
+            .Where(d => d.Level == level)
             .ToListAsync();
 
         var response = new ActionResponse<List<Directory>>

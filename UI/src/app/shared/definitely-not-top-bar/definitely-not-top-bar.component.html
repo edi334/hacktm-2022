@@ -1,1 +1,4 @@
-<mat-toolbar class="navbar"><p>logo</p></mat-toolbar>
+<mat-toolbar class="navbar d-flex flex-row justify-content-between">
+  <p>logo</p>
+  <p style="cursor: pointer" (click)="authService.logout()">Logout</p>
+</mat-toolbar>

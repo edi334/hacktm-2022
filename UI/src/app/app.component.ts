@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AuthService} from "./definitely-not-services/auth.service";
 
 @Component({
@@ -10,11 +10,7 @@ export class AppComponent {
   title = 'UI';
 
   constructor(
-    private _authService: AuthService,
+    readonly authService: AuthService,
   ) {
-  }
-
-  isLoggedIn() {
-    return this._authService.getSession();
   }
 }

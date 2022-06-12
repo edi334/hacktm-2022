@@ -1,8 +1,16 @@
-<ng-container *ngIf="currentDirectories !== []">
-  <div class="d-flex flex-column">
-    <div *ngFor="let directory of currentDirectories">
-      <span (click)="getNext(directory.id)">{{directory.title}}</span>
+<ng-container *ngIf="loading === false">
+  <div class="d-flex flex-column w-100 align-items-center justify-content-center py-3">
+    <div class="tree-header">Find the Box of Nothing</div>
+    <div *ngFor="let directory of currentDirectories" class="py-2">
+      <app-definitely-not-folder
+        [directory]="directory"
+        (click)="getNext(directory.id)"
+      ></app-definitely-not-folder>
     </div>
+    <app-definitely-not-a-button
+      (click)="goBack()"
+      text="Go Back"
+      *ngIf="!isRoot"
+    ></app-definitely-not-a-button>
   </div>
-  <button (click)="goBack()">Go Back</button>
 </ng-container>

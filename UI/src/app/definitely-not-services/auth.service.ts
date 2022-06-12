@@ -33,8 +33,9 @@ export class AuthService {
     return firstValueFrom(request$.pipe(tap(res => this.saveSession(res))));
   }
 
-  getSession() {
-    return this._session;
+  async isLoggedIn(): Promise<boolean> {
+    const token = <string>await this._storage.getItem(AuthService.tokenStorageKey).toPromise();
+    return !!token;
   }
 
   public async saveSession(authSession?: DefinitelyNotSessionModel): Promise<void> {
@@ -46,6 +47,13 @@ export class AuthService {
       await this._storage.removeItem(AuthService.sessionStorageKey).toPromise();
     }
     await this.loadSession();
+  }
+
+  public async logout(): Promise<void> {
+    await this._storage.removeItem(AuthService.tokenStorageKey).toPromise();
+    await this._storage.removeItem(AuthService.sessionStorageKey).toPromise();
+
+    await this._router.navigate(['login']);
   }
 
   private async loadSession(): Promise<void> {

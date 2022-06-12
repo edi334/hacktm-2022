@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../../definitely-not-services/auth.service';
 
 @Component({
   selector: 'app-definitely-not-top-bar',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefinitelyNotTopBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    readonly authService: AuthService
+  ) { }
 
   ngOnInit(): void {
   }

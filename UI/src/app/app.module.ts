@@ -25,6 +25,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import { DefinitelyNotCaptchaComponent } from './definitely-not-pages/definitely-not-captcha/definitely-not-captcha.component';
 import {MatRadioModule} from '@angular/material/radio';
+import { DefinitelyNotFolderComponent } from './definitely-not-pages/definitely-not-home-page/definitely-not-folder/definitely-not-folder.component';
+import { DefinitelyNotBoxPopupComponent } from './definitely-not-pages/definitely-not-home-page/definitely-not-box-popup/definitely-not-box-popup.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,9 @@ import {MatRadioModule} from '@angular/material/radio';
     DefinitelyNotLoginPageComponent,
     DefinitelyNotAButtonComponent,
     DefinitelyNotCaptchaComponent,
-    DefinitelyNotQuizPageComponent
+    DefinitelyNotQuizPageComponent,
+    DefinitelyNotFolderComponent,
+    DefinitelyNotBoxPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,8 @@ import {MatRadioModule} from '@angular/material/radio';
     MatToolbarModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatRadioModule
+    MatRadioModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

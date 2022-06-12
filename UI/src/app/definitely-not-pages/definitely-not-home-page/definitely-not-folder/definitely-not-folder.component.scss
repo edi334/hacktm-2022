@@ -1,0 +1,21 @@
+.folder-container {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #1E1E1E;
+  border-radius: 34px;
+
+  .name-container {
+    background: #D9D9D9;
+    height: 20%;
+    border-radius: 0 0 34px 34px;
+
+    p {
+      margin: 7.5px 0 0 0;
+    }
+  }
+
+  img {
+    height: 50%;
+    margin-top: 20%;
+  }
+}

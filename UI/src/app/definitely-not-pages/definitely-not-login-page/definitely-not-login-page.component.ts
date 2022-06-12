@@ -35,6 +35,7 @@ export class DefinitelyNotLoginPageComponent implements OnInit {
     }
    try{
      await this._authService.login(this.loginForm.value);
+     await this._router.navigate(['']);
      this._snack.open('Succes','OK',{duration: 4000});
    }
     catch (e:any) {
