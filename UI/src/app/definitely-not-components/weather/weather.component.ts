@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {WeatherService} from "../../definitely-not-services/weather.service";
-import {firstValueFrom} from "rxjs";
-import {IWeatherYesterday} from "../../definitely-not-models/definitely-not-weather-model";
 
 @Component({
   selector: 'app-weather',

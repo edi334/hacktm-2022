@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {firstValueFrom} from "rxjs";
-import {IWeatherModel} from "../definitely-not-models/definitely-not-weather-model";
 
 @Injectable({
   providedIn: 'root'
