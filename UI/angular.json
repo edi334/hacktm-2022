@@ -31,7 +31,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/logo/definitely-not-a-navicon.png"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
