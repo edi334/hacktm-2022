@@ -9,19 +9,25 @@
 }
 
 .form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background-color: black;
   border-radius: 0 70px 0 70px;
-  padding-left: 30px;
-  padding-right: 150px;
+  min-width: 50%;
+  max-width: 75%;
+  padding: 40px 60px 60px 60px;
 }
 
 .radio-group {
   display: flex;
   flex-direction: column;
   margin: 15px 0;
-  align-items: flex-start;
+  align-items: start;
   color: white;
-  padding-top: 15px;
+  padding-top: 10px;
+  font-weight: 450;
+  font-size: 27px;
 }
 
 .radio-button {
@@ -32,11 +38,6 @@
   font-weight: 600;
   font-size: 40px;
   color: white;
-}
-
-.radio-group {
-  font-weight: 450;
-  font-size: 27px;
 }
 
 .question-counter {
@@ -68,6 +69,11 @@
   width: 100px !important;
 }
 
+textarea {
+  width: 100%;
+  padding: 5px;
+}
+
 
 .icon-wrapper {
   border: none;
@@ -79,10 +85,6 @@
   .content-wrapper {
     flex-direction: column-reverse;
     justify-content: space-around !important;
-  }
-
-  .form-container {
-    padding-right: 20px;
   }
 
   .question-counter {
@@ -105,6 +107,10 @@
   .question-counter p{
     font-size: 55px;
     font-weight: 550;
+  }
+
+  .form-container {
+    max-width: 100% !important;
   }
 }
 

@@ -4,7 +4,7 @@
   </div>
 
   <div class="content-wrapper d-inline-flex px-md-5 justify-content-between w-100">
-    <div class="form-container  py-3">
+    <div class="form-container">
       <label id="group-lable">{{currentQuestion.questionText}}</label>
       <mat-radio-group class="radio-group"
                        *ngIf="currentQuestion.isGrill"
@@ -26,7 +26,7 @@
           {{currentQuestion.option3}}
         </mat-radio-button>
       </mat-radio-group>
-      <textarea *ngIf="!currentQuestion.isGrill" [(ngModel)]="answer"></textarea>
+      <textarea *ngIf="!currentQuestion.isGrill" [(ngModel)]="answer" [rows]="7"></textarea>
     </div>
     <div class="question-counter align-items-center justify-content-center">
       <div class="question-counter-content flex-column d-flex justify-content-around text-center h-50"
@@ -37,13 +37,13 @@
       </div>
     </div>
   </div>
-
-  <app-definitely-not-a-button (click)="checkAnswer()" text="CheckAnswer"></app-definitely-not-a-button>
-
-  <div class="arrow-container d-inline-flex justify-content-between w-100 px-md-5">
+  <div class="arrow-container d-inline-flex justify-content-between align-items-center w-100 px-md-5">
     <button class="icon-wrapper" (click)="changeCurrentQuestion(index-1)"><img class="arrow-icon"
                                                                                src="assets/image/arrow_right.svg"
                                                                                alt="<-"/></button>
+
+    <app-definitely-not-a-button (click)="checkAnswer()" text="CheckAnswer"></app-definitely-not-a-button>
+
     <button class="icon-wrapper" (click)="changeCurrentQuestion(index+1)"><img class="arrow-icon"
                                                                                src="assets/image/arrow_left.svg"
                                                                                alt="->"/></button>
