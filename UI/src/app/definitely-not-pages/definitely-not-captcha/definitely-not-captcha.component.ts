@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-definitely-not-captcha',
@@ -15,17 +16,18 @@ export class DefinitelyNotCaptchaComponent implements OnInit {
   images: string[] = this.numbers.map(n => this.imagesPath + n + '.jpg');
 
 
-  constructor(private _snack:MatSnackBar) {
+  constructor(private _snack:MatSnackBar,
+              private _router:Router) {
   }
 
   ngOnInit(): void {
   }
 
-  submit(){
-    if(this.solution==='the solution'){
-      this._snack.open('Succes','OK',{duration: 4000});
-    }
-    else this._snack.open('Wrong','OK',{duration: 4000});
+  async submit() {
+    if (this.solution === 'the solution') {
+      this._snack.open('Succes', 'OK', {duration: 4000});
+      await this._router.navigateByUrl('/login');
+    } else this._snack.open('Wrong', 'OK', {duration: 4000});
   }
 
 }
